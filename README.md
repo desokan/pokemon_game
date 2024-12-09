@@ -1,19 +1,21 @@
 # Pokemon
 
+## To run the script: python main_start.py pokemon_name
+
 ## Core Objectives
 
-Learn API Interaction: Gain hands-on experience working with an API (specifically PokéAPI) in Python.
-Build a Game: Create a game using Python where the game data is sourced from an API.
+- Learn API Interaction: Gain hands-on experience working with an API (specifically PokéAPI) in Python.
+- Build a Game: Create a game using Python where the game data is sourced from an API.
 
 ## Project Guidelines
 
-Teamwork: Work in groups of 2-3 to build a single game.
-API Usage: Utilize the PokéAPI to obtain Pokémon data for your game.
-Pokémon Selection: At least the CPU's Pokémon should be randomly selected, while the player can choose or have a random Pokémon.
-Game Mechanics: Implement a battle system where Pokémon fight, and a winner is determined.
-Focus: Prioritize API interaction over complex game graphics or Pygame integration.
-Creativity: Explore incorporating various Pokémon abilities, stats, or other unique features into the game.
-Collaboration: Use Git to manage your project collaboratively in a shared repository.
+1. Teamwork: Work in groups of 2-3 to build a single game.
+2. API Usage: Utilize the PokéAPI to obtain Pokémon data for your game.
+3. Pokémon Selection: At least the CPU's Pokémon should be randomly selected, while the player can choose or have a random Pokémon.
+4. Game Mechanics: Implement a battle system where Pokémon fight, and a winner is determined.
+5. Focus: Prioritize API interaction over complex game graphics or Pygame integration.
+6. Creativity: Explore incorporating various Pokémon abilities, stats, or other unique features into the game.
+7. Collaboration: Use Git to manage your project collaboratively in a shared repository.
 
 ## Starter Code
 
