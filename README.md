@@ -2,10 +2,10 @@
 
 ## Core Objectives
 
-```txt
 Learn API Interaction: Gain hands-on experience working with an API (specifically PokéAPI) in Python.
 Build a Game: Create a game using Python where the game data is sourced from an API.
-Project Guidelines:
+
+## Project Guidelines
 
 Teamwork: Work in groups of 2-3 to build a single game.
 API Usage: Utilize the PokéAPI to obtain Pokémon data for your game.
@@ -14,7 +14,8 @@ Game Mechanics: Implement a battle system where Pokémon fight, and a winner is 
 Focus: Prioritize API interaction over complex game graphics or Pygame integration.
 Creativity: Explore incorporating various Pokémon abilities, stats, or other unique features into the game.
 Collaboration: Use Git to manage your project collaboratively in a shared repository.
-```
+
+## Starter Code
 
 ```py
 import requests
@@ -27,9 +28,11 @@ pokemon_list = json.loads(response.text)['results']
 
 for pokemon in pokemon_list:
     print(pokemon['name'])
-    print('Enter your pokemon:')
 
 # Ask the user to choose a Pokémon
+print('Enter your pokemon:')
+
+# get the user's choice
 choice = input().lower()
 
 # Get the Pokémon's data from the API
