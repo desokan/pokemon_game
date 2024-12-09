@@ -1,6 +1,9 @@
 # Pokemon
 
-## To run the script: python main_start.py pokemon_name
+## To run the script
+
+`python main_start.py pokemon_name`
+`python main_start.py beedrill`
 
 ## Core Objectives
 
