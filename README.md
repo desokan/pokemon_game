@@ -57,3 +57,134 @@ print('Weight: {} kgs'.format(weight_formatted))
 print('Height: {} m'.format(height_formatted))
 print('Ability: {}'.format(ability['name']))
 ```
+
+## List Comprehension
+
+```json => Example Data
+pokemon_data = {
+    "abilities": [
+        {
+            "ability": {"name": "static", "url": "https://pokeapi.co/api/v2/ability/9/"},
+            "is_hidden": False,
+            "slot": 1
+        },
+        {
+            "ability": {"name": "lightning-rod", "url": "https://pokeapi.co/api/v2/ability/31/"},
+            "is_hidden": True,
+            "slot": 3
+        }
+    ]
+}
+```
+
+1. pokemon_data['abilities']:
+
+   - Extract the list of abilities from the Pokémon data.
+
+   ```python => Output
+   [
+       {
+           "ability": {"name": "static", "url": "https://pokeapi.co/api/v2/ability/9/"},
+           "is_hidden": False,
+           "slot": 1
+       },
+       {
+           "ability": {"name": "lightning-rod", "url": "https://pokeapi.co/api/v2/ability/31/"},
+           "is_hidden": True,
+           "slot": 3
+       }
+   ]
+   ```
+
+2. Iterating with for ability in pokemon_data['abilities']:
+
+   - Each ability is one dictionary from the abilities list.
+
+   ```python => First iteration
+   {
+       "ability": {"name": "static", "url": "https://pokeapi.co/api/v2/ability/9/"},
+       "is_hidden": False,
+       "slot": 1
+   }
+   ```
+
+   ```python => Second iteration
+   {
+       "ability": {"name": "lightning-rod", "url": "https://pokeapi.co/api/v2/ability/31/"},
+       "is_hidden": True,
+       "slot": 3
+   }
+   ```
+
+3. ability['ability']:
+
+   - Access the "ability" key within each dictionary.
+
+   ```python => First iteration
+   {"name": "static", "url": "https://pokeapi.co/api/v2/ability/9/"}
+   ```
+
+   ```python => Second iteration
+   {"name": "lightning-rod", "url": "https://pokeapi.co/api/v2/ability/31/"}
+   ```
+
+4. `ability['ability']['name']`
+
+   - Extract the "name" key from the nested dictionary.
+
+   ```python => First iteration
+   "static"
+   ```
+
+   ```python => First iteration
+   "lightning-rod"
+   ```
+
+5. List Comprehension:
+   `abilities = [ability['ability']['name'] for ability in pokemon_data['abilities']]`
+
+   ```py => Final output
+   ["static", "lightning-rod"]
+   ```
+
+## Output
+
+```py
+Step 1: Extract the abilities list
+[{'ability': {'name': 'static', 'url': 'https://pokeapi.co/api/v2/ability/9/'}, 'is_hidden': False, 'slot': 1}, {'ability': {'name': 'lightning-rod', 'url': 'https://pokeapi.co/api/v2/ability/31/'}, 'is_hidden': True, 'slot': 3}]
+
+Step 2: Extract each ability dictionary
+{'ability': {'name': 'static', 'url': 'https://pokeapi.co/api/v2/ability/9/'}, 'is_hidden': False, 'slot': 1}
+{'ability': {'name': 'lightning-rod', 'url': 'https://pokeapi.co/api/v2/ability/31/'}, 'is_hidden': True, 'slot': 3}
+
+Step 3: Extract the 'ability' sub-dictionary
+{'name': 'static', 'url': 'https://pokeapi.co/api/v2/ability/9/'}
+{'name': 'lightning-rod', 'url': 'https://pokeapi.co/api/v2/ability/31/'}
+
+Step 4: Extract the 'name' from 'ability'
+static
+lightning-rod
+
+Step 5: Use list comprehension to extract all names
+['static', 'lightning-rod']
+```
+
+List comprehension is a concise and elegant way to create lists in Python. It allows you to generate a new list by applying an expression to each item in an existing iterable (like a list, range, or dictionary).
+
+```python
+new_list = [expression for item in iterable if condition]
+```
+
+## Components
+
+1. expression:
+
+   - Defines how each element in the new list should be generated.
+
+2. for item in iterable:
+
+   - Iterates over each element of the given iterable (like a list, range, or dictionary).
+
+3. if condition (optional):
+
+   - Adds a filter to include only certain elements.
